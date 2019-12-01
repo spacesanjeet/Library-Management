@@ -8,5 +8,5 @@ Library Management Project.
   - ```create table Bookrecord (bno int(3), bname varchar(14), Auth varchar(14), price int(3), publ varchar(14), date Date);```
   - ```create table member (mno int(3), mname varchar(14), date Date, addr varchar(14), mob varchar(14);```
   - ```create table issue (bno int(3), mno int(3), d_o_issue Date, d_o_ret Date);```
-9) You can always change the values provided in the code to customize them according to your needs.'
-10) To use the Library Management Project, just download the files provided here and run the filed named **Library Management.py** to get started.
+6) You can always change the values provided in the code to customize them according to your needs.'
+7) To use the Library Management Project, just download the files provided here and run the filed named **Library Management.py** to get started.
