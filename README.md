@@ -1,5 +1,5 @@
 # Library-Management
-![](https://cdn.discordapp.com/attachments/519576119503224842/652223060157399049/rainbow_line.gif)
+![](https://cdn.discordapp.com/attachments/519576119503224842/652223060157399049/rainbow_line.gif)\n
 Library Management Project.
 1) To initialize the project, you need to have database named **Library** with tables namely **Bookrecord**, **member**, and **issue** inside it respectively.
 2) You can accordingly may change the database name, the password to your local MYSQL and other tables names.
