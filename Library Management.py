@@ -1,14 +1,19 @@
 #Project on Library Management System
 #--------------------------------------------------------------------------------
 #MODULE : LIBRARY MANAGEMENT
+import Database
 import Menulib
 import Book
 import Issue
 
+Database.DatabaseCreate()
+Database.TablesCreate()
+
+
 while True:
     Book.clrscreen()
     print("\t\t\t Library Management\n")
-    print("======================================================================")
+    print("=====================================================================")
     print("1. Book Management")
     print("2. Members Management")
     print("3. Issue/Return Book")
@@ -25,3 +30,4 @@ while True:
     else:
         print("Wrong Choice.....Enter Your Choice again")
         x = input("Press any key to continue")
+        
