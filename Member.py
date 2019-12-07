@@ -70,12 +70,12 @@ def SearchMember():
         rec_srch = (mnm,)
         Cursor.execute(query, rec_srch)
         Rec_count = 0
-        for(mno, mname, date, addr, mob) in Cursor:
+        for(mno, mname, Date_of_Membership, addr, mob) in Cursor:
             Rec_count += 1
             print("=============================================================")
             print("Member Code : ", mno)
             print("Member Name : ", mname)
-            print("Date of Membership : ", date)
+            print("Date of Membership : ", Date_of_Membership)
             print("Address : ", addr)
             print("Mobile No. of Member : ", mob)
             print("=============================================================")
@@ -111,8 +111,9 @@ def UpdateMember():
         YY = int(input("Enter Year : "))
         addr = input("Enter Member address : ")
         mob = input("Enter Member's mobile no : ")
-        Qry = ("UPDATE member SET mname=%s, date=%s, addr=%s, mob=%s WHERE mno=%s")
-        data = (mname,date(YY,MM,DD),addr,mob,mno)
+        Date_of_Membership = date(YY,MM,DD)
+        Qry = ("UPDATE member SET mname=%s, Date_of_Membership=%s, addr=%s, mob=%s WHERE mno=%s")
+        data = (mname,Date_of_Membership,addr,mob,mno)
         Cursor.execute(Qry,data)
         cnx.commit()
         Cursor.close()
