@@ -25,8 +25,8 @@ def SearchIssuedBooks():
             print("=============================================================")
             print("1.Book Code : ", Bno)
             print("2.Member Code : ", Mno)
-            print("3.Date of issue : ", d_o_issue)
-            print("4.Date of return : ", d_o_ret)
+            print("3.Date of Issue : ", d_o_issue)
+            print("4.Date of Return : ", d_o_ret)
             print("=============================================================")
             if Rec_count%2 == 0:
                 input("Press any key continue")
