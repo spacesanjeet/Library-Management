@@ -6,6 +6,7 @@ from mysql.connector import(connection)
 import os
 import platform
 
+
 def clrscreen():
     if platform.system() == "Windows":
         print(os.system("cls"))
@@ -73,17 +74,17 @@ def SearchBookRec():
         rec_srch = (bno,)
         Cursor.execute(query, rec_srch)
         Rec_count = 0
-        for(Bno, Bname, Author, price, publ, qty, d_o_purchase) in Cursor:
+        for(Bno, Bname, Author, price, publ, qty, Date_of_Purchase) in Cursor:
             Rec_count += 1
-            print("====================================================")
+            print("=============================================================")
             print("Book Code : ", Bno)
             print("Book Name : ", Bname)
             print("Author of Book : ", Author)
             print("Price of Book : ", price)
             print("Publisher : ", publ)
             print("Total Quantity in Hand : ", qty)
-            print("Purchased On : ", d_o_purchase)
-            print("====================================================")
+            print("Purchased On : ", Date_of_Purchase)
+            print("=============================================================")
             if Rec_count%2 == 0:
                 input("Press any key continue")
                 clrscreen()
@@ -118,8 +119,9 @@ def UpdateBook():
         DD = int(input("Enter Date : "))
         MM = int(input("Enter Month : "))
         YY = int(input("Enter Year : "))
-        Qry = ("UPDATE BookRecord SET bname=%s, Author=%s, price=%s, publ=%s, qty=%s, date=%s WHERE Bno=%s")
-        data = (bname, Auth, price, publ, qty, date(YY,MM,DD),bno)
+        Date_of_Purchase = date(YY,MM,DD)
+        Qry = ("UPDATE BookRecord SET bname=%s, Auth=%s, price=%s, publ=%s, qty=%s, Date_of_Purchase=%s WHERE Bno=%s")
+        data = (bname, Auth, price, publ, qty, Date_of_Purchase, bno)
         Cursor.execute(Qry,data)
         cnx.commit()
         Cursor.close()
